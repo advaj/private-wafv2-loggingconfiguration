@@ -21,7 +21,7 @@ The following instructions help you to extract the code in this repository and s
 5. Change to the Logging Configuration directory - `cd aws-cloudformation-resource-providers-wafv2/loggingconfiguration`
 6. Build this resource - `mvn clean package`
 7. Submit this resource to your account using - `cfn submit -vv --set-default`
-8. Go to Cloudformation -> Cloudformation Registry -> Private. You should see a new type - AWS::WAFv2::LoggingConfiguration
+8. Go to Cloudformation -> Cloudformation Registry -> Private. You should see a new type - Private::WAFv2::LoggingConfiguration
 
 Congratulations! You can now use Private::WAFv2::LoggingConfiguration in your Cloudformation Templates. Example Templates are available in the repository
 
