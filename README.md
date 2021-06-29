@@ -1,5 +1,5 @@
 # AWS::WAFv2::LoggingConfiguration
-This resource enables the creation of AWS WAFv2 Logging Configuration for WAFv2 WebACL via Cloudformation. In effect, you will now have the resource, AWS::WAFv2::LoggingConfiguration available to you to deploy using Cloudformation.
+This resource enables the creation of AWS WAFv2 Logging Configuration for WAFv2 WebACL via Cloudformation. In effect, you will now have the resource, Private::WAFv2::LoggingConfiguration available to you to deploy using Cloudformation.
 
 This has been made possible using Cloudformation Registry. For more details about Cloudformation Registry - please look at: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html
 
