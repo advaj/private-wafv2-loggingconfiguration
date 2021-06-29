@@ -17,7 +17,7 @@ The following instructions help you to extract the code in this repository and s
 1. Pull the `aws-wafv2-commons` code from - https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-wafv2/tree/main/aws-wafv2-commons
 2. Change to the `aws-wafv2-commons` directory - `cd aws-wafv2-commons`
 3. Install the the library into your local maven path using the command - `mvn clean install`
-4. Create a directory called `loggincconfiguration` and pull the Logging Configuration code from - https://github.com/advaj/private-wafv2-loggingconfiguration/
+4. Create a directory called `loggingconfiguration` and pull the Logging Configuration code from - https://github.com/advaj/private-wafv2-loggingconfiguration/
 5. Change to the Logging Configuration directory - `cd aws-cloudformation-resource-providers-wafv2/loggingconfiguration`
 6. Build this resource - `mvn clean package`
 7. Submit this resource to your account using - `cfn submit -vv --set-default`
