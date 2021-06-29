@@ -12,13 +12,16 @@ The Cloudformation CLI tool is needed to submit this resource to Cloudformation 
 
 ## Submitting this resource as a Private Type
 
-The following instructions help you to extract the code in this repository and submit this resource as a private type to your account.
+The following instructions help you to extract the code in this repository and submit this resource as a private type to your account. You will also need the `aws-wafv2-commons` libraries in your local environment before you build this package.  
 
-1. Pull this code to your laptop using your favorite method. For me - `git clone git@github.com:advaj/aws-cloudformation-resource-providers-wafv2.git`
-2. Change to the Logging Configuration directory - `cd aws-cloudformation-resource-providers-wafv2/loggingconfiguration`
-3. Build this resource - `mvn clean package` - Make sure you are using Java 8 by running `java -version` on your laptop.
-4. Submit this resource to your account using - `cfn submit -vv --set-default`
-5. Go to Cloudformation -> Cloudformation Registry -> Private. You should see a new type - Private::WAFv2::LoggingConfiguration
+1. Pull the `aws-wafv2-commons` code from - https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-wafv2/tree/main/aws-wafv2-commons
+2. Change to the `aws-wafv2-commons` directory - `cd aws-wafv2-commons`
+3. Install the the library into your local maven path using the command - `mvn clean install`
+4. Create a directory called `loggincconfiguration` and pull the Logging Configuration code from - https://github.com/advaj/private-wafv2-loggingconfiguration/
+5. Change to the Logging Configuration directory - `cd aws-cloudformation-resource-providers-wafv2/loggingconfiguration`
+6. Build this resource - `mvn clean package`
+7. Submit this resource to your account using - `cfn submit -vv --set-default`
+8. Go to Cloudformation -> Cloudformation Registry -> Private. You should see a new type - AWS::WAFv2::LoggingConfiguration
 
 Congratulations! You can now use Private::WAFv2::LoggingConfiguration in your Cloudformation Templates. Example Templates are available in the repository
 
