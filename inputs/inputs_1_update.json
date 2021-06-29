@@ -1,0 +1,55 @@
+{
+        "ResourceArn": "arn:aws:wafv2:ap-southeast-1:123456789123:regional/webacl/test-webacl-v2/bf0b1418-418e-4c38-891e-7fa303355908",
+        "LogDestinationConfigs": [
+          "arn:aws:firehose:ap-southeast-1:123456789123:deliverystream/aws-waf-logs-firehose-2"
+        ],
+        "RedactedFields": [
+          {
+            "JsonBody": {
+              "InvalidFallbackBehavior": "EVALUATE_AS_STRING",
+              "MatchPattern": {
+                "IncludedPaths": [
+                  "/dogs/0/name",
+                  "/dogs/1/name"
+                ]
+              },
+              "MatchScope": "ALL"
+            }
+          },
+          {
+            "Method": {}
+          },
+          {
+            "QueryString": {}
+          },
+          {
+            "SingleHeader": {
+              "Name": "changedpassword"
+            }
+          },
+          {
+            "UriPath": {}
+          }
+        ],
+        "LoggingFilter": {
+          "DefaultBehavior": "DROP",
+          "Filters": [
+            {
+              "Behavior": "DROP",
+              "Conditions": [
+                {
+                  "ActionCondition": {
+                    "Action": "BLOCK"
+                  }
+                },
+                {
+                  "LabelNameCondition": {
+                    "LabelName": "testlabel"
+                  }
+                }
+              ],
+              "Requirement": "MEETS_ANY"
+            }
+          ]
+        }
+}
